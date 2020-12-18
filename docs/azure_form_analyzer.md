@@ -7,7 +7,11 @@ Form Recognizer is composed of custom document processing models, prebuilt model
 Refer to Azure Form Recognizer [documentation](https://azure.microsoft.com/en-us/services/cognitive-services/form-recognizer/) for more details on it.
 
 
+<br/>
+
 ---
+
+<br/>
 
 
 ## Azure Setup
@@ -15,7 +19,11 @@ Refer to Azure Form Recognizer [documentation](https://azure.microsoft.com/en-us
  - Once the resource is created it will give endpoint and the resourse key. These are used in Receipt Analyzer API's code when making call to azure service.
 
 
+<br/>
+
 ---
+
+<br/>
 
 
 ## Azure Form Analyzer APIs
