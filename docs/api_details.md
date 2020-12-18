@@ -11,6 +11,7 @@ API is deployed on DigitalOcean and can be accessed by [Swagger-UI](http://68.18
 		 - **Name:** receipt_file
 		 - **type:** file
 
+<br/>
 
  - **/receipt/analyze/result/raw/{id}**
 	 - **Summary:** Returns Receipt Analysis Raw Result
@@ -21,6 +22,7 @@ API is deployed on DigitalOcean and can be accessed by [Swagger-UI](http://68.18
 		 - **Name:** analysis-result-id
 		 - **type:** string
 
+<br/>
 
  - **/receipt/analyze/result/{id}**
 	 - **Summary:** Returns Receipt Analysis Result
