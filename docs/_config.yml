@@ -1,1 +1,15 @@
-theme: jekyll-theme-minimal
+title: Receipt Analyzer
+
+theme: minima
+layout: default
+
+include:
+  - README.md
+  - form_analyzer.md
+  - api_details.md
+  - technical_implementation.md
+
+header_pages:
+  - form_analyzer.md
+  - api_details.md
+  - technical_implementation.md
