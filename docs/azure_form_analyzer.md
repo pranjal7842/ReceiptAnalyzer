@@ -6,15 +6,23 @@ Form Recognizer is composed of custom document processing models, prebuilt model
 
 Refer to Azure Form Recognizer [documentation](https://azure.microsoft.com/en-us/services/cognitive-services/form-recognizer/) for more details on it.
 
+
+---
+
+
 ## Azure Setup
  - To start using the Azure Form Service we need to first create a new Form Recognizer resource on the Azure portal.
  - Once the resource is created it will give endpoint and the resourse key. These are used in Receipt Analyzer API's code when making call to azure service.
- 
+
+
+---
+
+
 ## Azure Form Analyzer APIs
 To start analyzing a receipt, we call Analyze Receipt API using the Python code in Receipt Analyzer API. The response of this API includes an Operation-Location header, which is used get the results in JSON format using Get Analyze Receipt Result API. There are 2 main node in the JSON response 
  - readResults - This node contains all of the recognized text. Text is organized by page, then by line, then by individual words. 
  - documentResults - This node contains the receipt-specific values that the model discovered. This is where we'll find useful key/value pairs like the tax, total, merchant address, and so on.
- 
+
 Refer to below links from Azure Form Recognizer [documentation] for more details on these APIs:
  - [Analyze Receipt API](https://westus2.dev.cognitive.microsoft.com/docs/services/form-recognizer-api-v2/operations/AnalyzeReceiptAsync)
  - [Get Analyze Receipt Result API](https://westus2.dev.cognitive.microsoft.com/docs/services/form-recognizer-api-v2/operations/GetAnalyzeReceiptResult)
