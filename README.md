@@ -19,3 +19,5 @@ Some sample receipts can be found [here](https://github.com/pranjal7842/ReceiptA
 
 ### API Details
 Looking for more details on Receipt Analyzer API please check out the API's **[GitHub Pages](https://pranjal7842.github.io/ReceiptAnalyzer/)** :books:
+
+All the markdown files used by Github Pages can be found in **/docs** folder.
