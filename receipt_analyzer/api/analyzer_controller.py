@@ -2,8 +2,8 @@ import string
 
 from flask_restplus import Resource
 from werkzeug.datastructures import FileStorage
-from receipt_analyzer.api.restplus import api
-from receipt_analyzer.service import analyzer_service as service
+from api.restplus import api
+from service import analyzer_service as service
 
 ns = api.namespace('receipt/analyze', description='Operations related Receipt Analysis')
 upload_parser = api.parser()

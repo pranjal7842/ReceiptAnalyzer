@@ -1,7 +1,7 @@
 import logging
 
 from flask_restplus import Api
-from receipt_analyzer import settings
+import settings
 
 log = logging.getLogger(__name__)
 

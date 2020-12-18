@@ -25,6 +25,7 @@ params = {
 
 log = logging.getLogger(__name__)
 
+
 def analyze_file(uploaded_file: Any):
     data_bytes = uploaded_file.read()
     try:
@@ -32,19 +33,28 @@ def analyze_file(uploaded_file: Any):
         if resp.status_code != 202:
             log.error("POST analyze failed:%s" % resp.text)
             return
-        log.info("POST analyze succeeded:%s" % resp.headers)
+        print("POST analyze succeeded:%s" % resp.headers)
         get_url = resp.headers["operation-location"]
-        return get_analyze_result(get_url)
+        analysis_resp = {"analysis-id": resp.headers["apim-request-id"]}
+        resp_data = get_analyze_result(get_url)
+        resp_data.update(analysis_resp)
+        return resp_data
     except Exception as e:
         print("POST analyze failed:\n%s" % str(e))
         raise
 
+
 def get_analyze_result(id: string):
-    return get_analyze_raw_result(id)
+    analysis_resp = {"analysis-id": id}
+    resp_data = get_analyze_raw_result(id)
+    resp_data.update(analysis_resp)
+    return resp_data
+
 
 def get_analyze_raw_result(id: string):
     analyze_result_url = analyze_result_base_url + id
     return get_analyze_result(analyze_result_url)
+
 
 def get_analyze_result(analyze_result_url: string):
     n_tries = 10
@@ -60,7 +70,7 @@ def get_analyze_result(analyze_result_url: string):
             status = resp_json["status"]
             if status == "succeeded":
                 log.info("Receipt Analysis succeeded:%s" % resp_json)
-                return resp_json
+                return remove_unwanted_fields(resp_json)
             if status == "failed":
                 log.info("Analysis failed:%s" % resp_json)
                 return resp_json
@@ -72,3 +82,11 @@ def get_analyze_result(analyze_result_url: string):
             log.error(msg)
             raise
 
+
+def remove_unwanted_fields(data):
+    if not isinstance(data, (dict, list)):
+        return data
+    if isinstance(data, list):
+        return [remove_unwanted_fields(v) for v in data]
+    return {k: remove_unwanted_fields(v) for k, v in data.items()
+            if k not in {'readResults', 'boundingBox', 'elements'}}

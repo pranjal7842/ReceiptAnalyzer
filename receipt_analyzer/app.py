@@ -2,9 +2,9 @@ import werkzeug
 werkzeug.cached_property = werkzeug.utils.cached_property
 
 from flask import Flask, Blueprint
-from receipt_analyzer import settings
-from receipt_analyzer.api.analyzer_controller import ns as controller_namespace
-from receipt_analyzer.api.restplus import api
+import settings
+from api.analyzer_controller import ns as controller_namespace
+from api.restplus import api
 
 
 app = Flask(__name__)
