@@ -46,6 +46,8 @@
 	sudo dnf update -y
 	sudo dnf install python3 -y
 	sudo dnf -y groupinstall development
+	sudo dnf install epel-release
+	sudo yum install screen
 	```
 
 
@@ -61,5 +63,7 @@
 #### If running on digital ocean droplet
  - Run the following command:
 	```
+	screen -S session1
 	python3 receipt_analyzer/app.py
 	```
+ - Use Ctrl+A+D to detach the screen session before closing command prompt. This will ensure the python server is up and running even if command prompt is closed.

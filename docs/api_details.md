@@ -25,7 +25,7 @@ API is deployed on DigitalOcean and can be accessed by [Swagger UI](http://68.18
 	 - **parameter:** 
 		 - **Name:** analysis_result_id
 		 - **type:** string
-	 - To execute this operation use a previously known analysis result id. If the id is not known then run the analyze operation by uplading a receipt file and using the analysis result id from its response.
+	 - To execute this operation use a previously known analysis result id. If the id is not known then run the analyze operation by uploading a receipt file and using the analysis result id from its response.
 
 <br/>
 
@@ -38,7 +38,7 @@ API is deployed on DigitalOcean and can be accessed by [Swagger UI](http://68.18
 	 - **parameter:** 
 		 - **Name:** analysis_result_id
 		 - **type:** string
-	 - To execute this operation use a previously known analysis result id. If the id is not known then run the analyze operation by uplading a receipt file and using the analysis result id from its response.
+	 - To execute this operation use a previously known analysis result id. If the id is not known then run the analyze operation by uploading a receipt file and using the analysis result id from its response.
 
 <br/>
 
