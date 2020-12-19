@@ -13,10 +13,11 @@
 
 
 ## Setup
-#### Prerequisite:
+### Prerequisite:
 
  - Python 3
  - pip
+
 
 ### Setup on Local Windows Machine:
 
@@ -26,6 +27,7 @@
 	cd receipt_analyzer
 	pip install -r requirements.txt
 	```
+
 
 ### Setup on Digital Ocean:
 
@@ -45,6 +47,7 @@
 	sudo dnf install python3 -y
 	sudo dnf -y groupinstall development
 	```
+
 
 ### Start the REST API:
 
