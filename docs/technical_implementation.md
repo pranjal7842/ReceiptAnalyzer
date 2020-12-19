@@ -51,6 +51,14 @@
 
 ### Start the REST API:
 
+#### If running on local windows machine
+ - Replace IP in settings.py file with *localhost*
+ - Run the following command:
+	```
+	python receipt_analyzer/app.py
+	```
+
+#### If running on digital ocean droplet
  - Run the following command:
 	```
 	python3 receipt_analyzer/app.py
