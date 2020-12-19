@@ -9,19 +9,11 @@ Refer to Azure Form Recognizer [documentation](https://azure.microsoft.com/en-us
 
 <br/>
 
----
-
-<br/>
-
 
 ## Azure Setup
  - To start using the Azure Form Service we need to first create a new Form Recognizer resource on the Azure portal.
  - Once the resource is created it will give endpoint and the resourse key. These are used in Receipt Analyzer API's code when making call to azure service.
 
-
-<br/>
-
----
 
 <br/>
 
