@@ -18,7 +18,7 @@
  - Python 3
  - pip
 
-#### Setup on Local Windows Machine:
+### Setup on Local Windows Machine:
 
  - Clone the code from [GitHub Repo](https://github.com/pranjal7842/ReceiptAnalyzer)
  - Run the following commands:
@@ -27,7 +27,7 @@
 	pip install -r requirements.txt
 	```
 
-#### Setup on Digital Ocean:
+### Setup on Digital Ocean:
 
  - Clone the code from [GitHub Repo](https://github.com/pranjal7842/ReceiptAnalyzer) on local machine
  - Create a new CentOS Droplet
@@ -46,7 +46,7 @@
 	sudo dnf -y groupinstall development
 	```
 
-#### Start the REST API:
+### Start the REST API:
 
  - Run the following command:
 	```
