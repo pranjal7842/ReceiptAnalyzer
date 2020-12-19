@@ -18,7 +18,7 @@ Refer to Azure Form Recognizer [documentation](https://azure.microsoft.com/en-us
 
 
 ## API Details
-API uses Swagger-UI to visualize and interact with the API’s resources. API is deployed on DigitalOcean and can be accessed by [Swagger-UI](http://68.183.137.125:8888/api/) link. To test the API:
+API uses Swagger-UI to visualize and interact with the API’s resources. API is deployed on DigitalOcean and can be accessed by [Swagger UI](http://68.183.137.125:8888/api/) link. To test the API:
  - Scan the receipt as a JPG file
  - Upload the scanned file using Swagger-UI
  - View the analysis result in JSON format
