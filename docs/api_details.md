@@ -33,5 +33,6 @@ API is deployed on DigitalOcean and can be accessed by [Swagger UI](http://68.18
 		 - **Name:** analysis-result-id
 		 - **type:** string
 
+<br/>
 
-Full Swagger JSON for the API deployed on Digital Ocean can be found [here](http://68.183.137.125:8888/api/swagger.json)
+Full Swagger JSON for the API deployed on Digital Ocean can be found [here](http://68.183.137.125:8888/api/swagger.json).
