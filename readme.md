@@ -18,7 +18,7 @@ Refer to Azure Form Recognizer [documentation](https://azure.microsoft.com/en-us
 
 
 ## API Details
-API uses Swagger-UI to visualize and interact with the API’s resources. API is deployed on DigitalOcean and can be accessed by [Swagger UI](http://68.183.137.125:8888/api/) link. To test the API:
+API uses Swagger-UI to visualize and interact with the API’s resources. API is deployed on Digital Ocean and can be accessed by [Swagger UI](http://68.183.137.125:8888/api/) link. To test the API:
  - Scan the receipt as a JPG file
  - Upload the scanned file using Swagger-UI
  - View the analysis result in JSON format
@@ -31,4 +31,4 @@ Some sample receipts can be found [here](https://github.com/pranjal7842/ReceiptA
 
 Looking for more details on Receipt Analyzer API please check out the API's **[GitHub Pages](https://pranjal7842.github.io/ReceiptAnalyzer/)** :books:
 
-All the markdown files used by Github Pages can be found in **[/docs](https://github.com/pranjal7842/ReceiptAnalyzer/tree/main/docs)** folder.
+All the markdown files used by GitHub Pages can be found in **[/docs](https://github.com/pranjal7842/ReceiptAnalyzer/tree/main/docs)** folder.
