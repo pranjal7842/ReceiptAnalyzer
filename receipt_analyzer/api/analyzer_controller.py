@@ -1,4 +1,4 @@
-import string
+# Controller script defining all the operations
 
 from flask_restplus import Resource
 from werkzeug.datastructures import FileStorage
@@ -10,8 +10,12 @@ upload_parser = api.parser()
 upload_parser.add_argument('receipt_file', location='files', type=FileStorage, required=True)
 
 @ns.route('/')
+@api.doc(
+    description="Analyze and returns the results for scanned(JPG) receipt"
+)
 class ReceiptAnalysis(Resource):
 
+    # Operation to Upload and Analyze Receipt
     @api.expect(upload_parser)
     def post(self):
         """Upload and Analyze Receipt"""
@@ -20,19 +24,27 @@ class ReceiptAnalysis(Resource):
         return service.analyze_file(uploaded_file)
 
 
-@ns.route('/result/<string:id>')
-@api.doc(params={"id": "Result ID"})
+@ns.route('/result/<string:analysis_result_id>')
+@api.doc(
+    description="Returns receipt analysis result using the analysis result id from Analyze operation",
+    params={"analysis_result_id": "Analysis result id from Analyze operation"}
+)
 class ReceiptAnalysisResult(Resource):
 
-    def get(self, id):
+    # Operation to Get Receipt Analysis Result
+    def get(self, analysis_result_id):
         """Returns Receipt Analysis Result"""
-        return service.get_analyze_result(id)
+        return service.get_analyze_result(analysis_result_id)
 
 
-@ns.route('/result/raw/<string:id>')
-@api.doc(params={"id": "Result ID"})
-class ReceiptAnalysisResult(Resource):
+@ns.route('/result/raw/<string:analysis_result_id>')
+@api.doc(
+    description="Returns receipt analysis raw result using the analysis result id from Analyze operation",
+    params={"analysis_result_id": "Analysis result id from Analyze operation"}
+)
+class ReceiptAnalysisRawResult(Resource):
 
-    def get(self, id):
+    # Operation to Get Receipt Analysis Raw Result
+    def get(self, analysis_result_id):
         """Returns Receipt Analysis Raw Result"""
-        return service.get_analyze_raw_result(id)
+        return service.get_analyze_raw_result(analysis_result_id)
